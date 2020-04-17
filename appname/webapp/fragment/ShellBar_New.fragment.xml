@@ -2,7 +2,6 @@
 	<FlexBox alignItems="Center" justifyContent="SpaceBetween" class="shell-bar" height="44px">
 		<FlexBox alignItems="Center" class="left">
 			<FlexBox class="logo">
-				<Image alt="assets/bosch_logo2.svg" src="assets/bosch_logo2.svg"  height="35px" />
 			</FlexBox>
 			<IconTabHeader class="menu-bar" id="iconTabHeader" selectedKey="transfer" select="onSelectTab" backgroundDesign="Transparent" mode="Inline">
 				<items>
