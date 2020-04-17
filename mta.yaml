@@ -1,0 +1,57 @@
+_schema-version: "3.2"
+ID: $APPNAME$
+version: 1.0.0
+modules:
+  - name: $APPNAME$-Approuter
+    type: approuter.nodejs
+    path: mta-$APPNAME$-approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    # properties:
+    #   TENANT_HOST_PATTERN: robert-bosch-gmbh-(.*)-tec-1-team-mta-ex773bfd9.cfapps.eu10.hana.ondemand.com
+    requires:
+      - name: $APPNAME$_html_repo_runtime
+      - name: $APPNAME$-xsuaa
+  - name: $APPNAME$-UIDeployer
+    type: com.sap.html5.application-content
+    path: $APPNAME$_ui_deployer
+    requires:
+      - name: $APPNAME$_html_repo_host
+    build-parameters:
+      requires:
+        - artifacts:
+            - ./*
+          name: $APPNAME$
+          target-path: resources/$APPNAME$-1.0.0
+  - name: $APPNAME$
+    type: html5
+    path: $APPNAME$
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm run build
+      supported-platforms: []
+resources:
+  - name: $APPNAME$_html_repo_runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime
+  - name: $APPNAME$_html_repo_host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+  - name: $APPNAME$-xsuaa
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install

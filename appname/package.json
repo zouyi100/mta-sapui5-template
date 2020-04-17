@@ -1,0 +1,36 @@
+{
+  "name": "$APPNAME$",
+  "version": "1.0.0",
+  "description": "app description",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ui5 serve -o index.html",
+    "lint": "eslint --fix webapp",
+    "less": "lessc webapp/less/style.less webapp/css/style.css",
+    "build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo",
+    "ci-build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo",
+    "ci-test": "rimraf s4hana_pipeline && karma start karma-ci.conf.js",
+    "local-test": "rimraf s4hana_pipeline && karma start"
+  },
+  "keywords": [
+    "ui5"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@ui5/cli": "latest",
+    "eslint": "^6.8.0",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-qunit": "^4.0.0",
+    "karma-ui5": "^2.0.0",
+    "@sap/ui5-builder-webide-extension": "^1.0.10"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ui5-builder-webide-extension"
+    ]
+  }
+}

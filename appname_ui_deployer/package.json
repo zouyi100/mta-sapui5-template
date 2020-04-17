@@ -1,0 +1,14 @@
+{
+  "name": "html5-apps-deployer",
+  "version": "1.0.0",
+  "description": "Node.js based application deployer service for html5-apps",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/@sap/html5-app-deployer/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/html5-app-deployer": "^2.0.3"
+  }
+}

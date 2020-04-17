@@ -1,0 +1,48 @@
+.shell-bar {
+    background-color: #354a5f;
+    padding: 0 48px;
+    .left {
+        .menu-bar {
+            border: none;
+            box-shadow: none;
+            .sapMITBText {
+                color: #fff !important;
+                font-weight: bold;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            .sapMITBSelected {
+                .sapMITBText {
+                    color: #d1e8ff !important;
+                }
+                .sapMITBContentArrow {
+                    height: 0.7rem !important;
+                    &::after {
+                        background-color: #d1e8ff !important;
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        .title {
+            margin-right: 1.5rem;
+            span {
+                color: #fff;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .hello {
+            color: #fff;
+            font-size: 12px;
+        }
+        .i18n-btn {
+            margin-left: 10px;
+            .sapUiIcon {
+                color: #f7f7f7;
+            }
+        }
+    }
+}

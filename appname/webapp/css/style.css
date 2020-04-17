@@ -1,0 +1,48 @@
+.shell-bar {
+  background-color: #354a5f;
+  padding: 0 48px;
+}
+.shell-bar .left .menu-bar {
+  border: none;
+  box-shadow: none;
+}
+.shell-bar .left .menu-bar .sapMITBText {
+  color: #fff !important;
+  font-weight: bold;
+}
+.shell-bar .left .menu-bar .sapMITBText:hover {
+  color: #fff;
+}
+.shell-bar .left .menu-bar .sapMITBSelected .sapMITBText {
+  color: #d1e8ff !important;
+}
+.shell-bar .left .menu-bar .sapMITBSelected .sapMITBContentArrow {
+  height: 0.7rem !important;
+}
+.shell-bar .left .menu-bar .sapMITBSelected .sapMITBContentArrow::after {
+  background-color: #d1e8ff !important;
+}
+.shell-bar .right .title {
+  margin-right: 1.5rem;
+}
+.shell-bar .right .title span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.shell-bar .right .hello {
+  color: #fff;
+  font-size: 12px;
+}
+.shell-bar .right .i18n-btn {
+  margin-left: 10px;
+}
+.shell-bar .right .i18n-btn .sapUiIcon {
+  color: #f7f7f7;
+}
+.sapTntToolPageHeader {
+  height: 60px !important;
+}
+.sapTntToolPageMainContentWrapper .sapMScrollContScroll {
+  height: 100%;
+}

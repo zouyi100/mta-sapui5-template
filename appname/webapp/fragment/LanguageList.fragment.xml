@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <ActionSheet showCancelButton="true" placement="Bottom">
+        <Button text="{i18n>LG_LIST_ZH}" id="zh" press="selectLanguage" />
+        <Button text="{i18n>LG_LIST_EN}" id="en" press="selectLanguage" />
+        <Button text="{i18n>LG_LIST_DE}" id="de" press="selectLanguage" />
+    </ActionSheet>
+</core:FragmentDefinition>

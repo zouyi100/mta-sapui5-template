@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.f" xmlns:html="http://www.w3.org/1999/xhtml">
+	<FlexBox alignItems="Center" justifyContent="SpaceBetween" class="shell-bar" height="44px">
+		<FlexBox alignItems="Center" class="left">
+			<FlexBox class="logo">
+				<Image alt="assets/bosch_logo2.svg" src="assets/bosch_logo2.svg"  height="35px" />
+			</FlexBox>
+			<IconTabHeader class="menu-bar" id="iconTabHeader" selectedKey="transfer" select="onSelectTab" backgroundDesign="Transparent" mode="Inline">
+				<items>
+					<IconTabFilter text="Home" key="home">
+					</IconTabFilter>
+					<IconTabFilter text="Administration" key="admin">
+					</IconTabFilter>
+				</items>
+			</IconTabHeader>
+		</FlexBox>
+		<FlexBox class="right" alignItems="Center">
+			<FlexBox class="title">
+				<Text text="Price Management" />
+			</FlexBox>
+			<Text class="hello" text="{i18n>HELLO_WORD}" />
+			<Button class="i18n-btn" icon="sap-icon://globe" type="Transparent" press="onLanguageSelectDialogShow" />
+		</FlexBox>
+	</FlexBox>
+</core:FragmentDefinition>

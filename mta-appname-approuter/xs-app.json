@@ -1,0 +1,5 @@
+{
+    "welcomeFile": "/$NAMESPACE$/",
+    "authenticationMethod": "none",
+    "routes": []
+  }
